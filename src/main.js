@@ -4,6 +4,7 @@ import router from './router'
 
 import BaseCard from './UI/BaseCard.vue'
 
+import Vuelidate from 'vuelidate'
 
 //PrimeVue :
 import PrimeVue from 'primevue/config';
@@ -21,6 +22,7 @@ const app = createApp(App);
 app.use(router);
 app.use(PrimeVue);
 app.use(ElementPlus);
+app.use(Vuelidate);
 app.component('base-card',BaseCard);
 app.component('prime-button', Button);
 app.mount('#app');

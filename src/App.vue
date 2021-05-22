@@ -10,10 +10,12 @@
     <el-menu-item index="2"><span @click="goToLogin">Login</span></el-menu-item>
   </el-menu> -->
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/about">About</router-link> 
-    
+    <router-link to="/">Home </router-link> |
+    <router-link to="/login">Login </router-link> |
+    <router-link to="/project">Project </router-link>  |
+    <router-link to="/about">About </router-link> |
+    <router-link to="/signin">Sign In </router-link>
+
   </div>
   <div>
 
@@ -37,14 +39,13 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-    goToHome( ) {
-      this.$route.push('/');
-      
+    goToHome() {
+      this.$route.push("/");
     },
     goToLogin() {
-      this.$route.push('/login');
-      alert('ca marche')
-    }
+      this.$route.push("/login");
+      alert("ca marche");
+    },
   },
 };
 </script>
@@ -63,10 +64,12 @@ export default {
 #nav {
   padding: 30px;
   position: absolute;
-  top: 3rem;
-  width: 100%;
+  bottom: 3rem;
+  right: 0rem;
+  width: 30%;
   display: flex;
   justify-content: center;
+  z-index: 20;
 }
 
 #nav a {
